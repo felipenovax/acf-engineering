@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { ArrowRight, CheckCircle, Zap, Shield, Star, Users, BarChart, Code } from "lucide-react"
 import Image from "next/image"
+import { StepBackIcon as Stairs, PaintBucket, ShieldCheck, Wrench, LucideLink } from "lucide-react"
 
 export default function Home() {
   return (
@@ -131,49 +132,89 @@ export default function Home() {
         </section>
         <section id="services" className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
-            <h2 className="text-3xl font-bold text-center mb-12">Our Services</h2>
-            <div className="grid gap-6 lg:grid-cols-2">
+            <h2 className="text-3xl font-bold text-center mb-12">Nossos Serviços</h2>
+            <div className="grid gap-6 lg:grid-cols-3">
               <Card>
                 <CardHeader>
-                  <CardTitle>Project Management</CardTitle>
+                  <CardTitle className="flex items-center gap-2">
+                    <Stairs className="h-5 w-5" />
+                    Escada Marinheiro
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p>
-                    Streamline your projects with our intuitive project management tools. Track progress, assign tasks,
-                    and collaborate seamlessly.
+                    Fabricação e instalação de escadas marinheiro seguindo todas as normas técnicas e de segurança,
+                    garantindo acesso seguro em altura.
                   </p>
                 </CardContent>
               </Card>
               <Card>
                 <CardHeader>
-                  <CardTitle>Customer Relationship Management</CardTitle>
+                  <CardTitle className="flex items-center gap-2">
+                    <PaintBucket className="h-5 w-5" />
+                    Pintura de Prédio e Fachada
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p>
-                    Manage your customer interactions and data in one place. Improve customer satisfaction and grow your
-                    business.
+                    Serviços especializados em pintura predial e de fachadas, com equipe qualificada e materiais de alta
+                    qualidade para resultados duradouros.
                   </p>
                 </CardContent>
               </Card>
               <Card>
                 <CardHeader>
-                  <CardTitle>Data Analytics</CardTitle>
+                  <CardTitle className="flex items-center gap-2">
+                    <ShieldCheck className="h-5 w-5" />
+                    Adequação NR12
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p>
-                    Turn your data into actionable insights. Our powerful analytics tools help you make informed
-                    decisions.
+                    Consultoria e implementação de adequações conforme a norma NR12, garantindo a segurança em máquinas
+                    e equipamentos industriais.
                   </p>
                 </CardContent>
               </Card>
               <Card>
                 <CardHeader>
-                  <CardTitle>Automation Services</CardTitle>
+                  <CardTitle className="flex items-center gap-2">
+                    <Wrench className="h-5 w-5" />
+                    Manutenção e Montagem Industrial
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p>
-                    Automate repetitive tasks and workflows. Increase efficiency and reduce errors across your
-                    organization.
+                    Serviços completos de manutenção preventiva e corretiva, além de montagem industrial, garantindo
+                    eficiência e segurança operacional.
+                  </p>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <Zap className="h-5 w-5" />
+                    SPDA
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p>
+                    Instalação e manutenção de Sistemas de Proteção contra Descargas Atmosféricas, protegendo sua
+                    estrutura contra raios.
+                  </p>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <LucideLink className="h-5 w-5" />
+                    Instalação e Linha de Vida
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p>
+                    Projeto e instalação de sistemas de linha de vida, proporcionando segurança para trabalhos em altura
+                    conforme normas vigentes.
                   </p>
                 </CardContent>
               </Card>
