@@ -5,8 +5,15 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { ArrowRight, CheckCircle, Zap, Shield, Star, Users, BarChart, Code } from "lucide-react"
 import Image from "next/image"
 import { StepBackIcon as Stairs, PaintBucket, ShieldCheck, Wrench, LucideLink } from "lucide-react"
+import { Carousel } from "./components/Carousel"
 
 export default function Home() {
+  const carouselSlides = [
+    { src: "/assets/slide-1.jpg?height=400&width=800", alt: "Slide 1" },
+    { src: "/assets/slide-2.jpeg?height=400&width=800", alt: "Slide 2" },
+    { src: "/assets/slide-3.jpeg?height=400&width=800", alt: "Slide 3" },
+  ]
+
   return (
     <div className="flex flex-col min-h-screen">
       <header className="px-4 lg:px-6 h-14 flex items-center">
@@ -33,7 +40,7 @@ export default function Home() {
         </nav>
       </header>
       <main className="flex-1">
-        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
+        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-24">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
@@ -58,6 +65,12 @@ export default function Home() {
                 </p>
               </div>
             </div>
+          </div>
+        </section>
+        <section id="carousel" className="w-full py-12 md:py-24 lg:py-16">
+          <div className="container px-4 md:px-6">
+            <h2 className="text-3xl font-bold text-start mb-12">Nossos Projetos</h2>
+            <Carousel slides={carouselSlides} />
           </div>
         </section>
         <section id="about" className="w-full py-12 md:py-24 lg:py-32">
